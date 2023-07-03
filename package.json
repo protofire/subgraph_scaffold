@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ datradito/shibuya_temp",
+    "deploy": "graph deploy --node http://index-shibuya.graph.astar.network/ datradito/shibuya_temp",
     "create-local": "graph create --node http://localhost:8020/ datradito/shibuya_temp",
     "remove-local": "graph remove --node http://localhost:8020/ datradito/shibuya_temp",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 datradito/shibuya_temp",
