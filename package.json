@@ -1,0 +1,18 @@
+{
+  "name": "shibuya_temp",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ datradito/shibuya_temp",
+    "create-local": "graph create --node http://localhost:8020/ datradito/shibuya_temp",
+    "remove-local": "graph remove --node http://localhost:8020/ datradito/shibuya_temp",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 datradito/shibuya_temp",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.51.0",
+    "@graphprotocol/graph-ts": "0.30.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}

@@ -1,0 +1,82 @@
+[
+  { "type": "constructor", "inputs": [], "stateMutability": "nonpayable" },
+  {
+    "name": "OracleUpdate",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "key",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "value",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      },
+      {
+        "name": "timestamp",
+        "type": "uint128",
+        "indexed": false,
+        "internalType": "uint128"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "UpdaterAddressChange",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "newUpdater",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "getValue",
+    "type": "function",
+    "inputs": [{ "name": "key", "type": "string", "internalType": "string" }],
+    "outputs": [
+      { "name": "", "type": "uint128", "internalType": "uint128" },
+      { "name": "", "type": "uint128", "internalType": "uint128" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "setValue",
+    "type": "function",
+    "inputs": [
+      { "name": "key", "type": "string", "internalType": "string" },
+      { "name": "value", "type": "uint128", "internalType": "uint128" },
+      { "name": "timestamp", "type": "uint128", "internalType": "uint128" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "updateOracleUpdaterAddress",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "newOracleUpdaterAddress",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "values",
+    "type": "function",
+    "inputs": [{ "name": "", "type": "string", "internalType": "string" }],
+    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "stateMutability": "view"
+  }
+]

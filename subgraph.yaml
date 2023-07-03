@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: DIACoingeckoOracle
+    network: mainnet
+    source:
+      address: "0x1232AcD632Dd75f874E357c77295Da3f5Cd7733E"
+      abi: DIACoingeckoOracle
+      startBlock: 81850
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - OracleUpdate
+        - UpdaterAddressChange
+      abis:
+        - name: DIACoingeckoOracle
+          file: ./abis/DIACoingeckoOracle.json
+      eventHandlers:
+        - event: OracleUpdate(string,uint128,uint128)
+          handler: handleOracleUpdate
+        - event: UpdaterAddressChange(address)
+          handler: handleUpdaterAddressChange
+      file: ./src/dia-coingecko-oracle.ts

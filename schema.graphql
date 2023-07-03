@@ -1,0 +1,17 @@
+type OracleUpdate @entity(immutable: true) {
+  id: Bytes!
+  key: String! # string
+  value: BigInt! # uint128
+  timestamp: BigInt! # uint128
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UpdaterAddressChange @entity(immutable: true) {
+  id: Bytes!
+  newUpdater: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
