@@ -1,0 +1,57 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: AVaultPCS
+    network: mainnet
+    source:
+      address: "0x9A6080753a35dCd8e77102aE83A93170A831393e"
+      abi: AVaultPCS
+      startBlock: 1366564
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - OwnershipTransferred
+        - PathsUpdated
+        - Paused
+        - SetBuyBackAddress
+        - SetDiceModulus
+        - SetIsEarnable
+        - SetSettings
+        - SetUniRouterAddress
+        - SetWethToAvaRouterAddress
+        - Transfer
+        - Unpaused
+      abis:
+        - name: AVaultPCS
+          file: ./abis/AVaultPCS.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: PathsUpdated()
+          handler: handlePathsUpdated
+        - event: Paused(address)
+          handler: handlePaused
+        - event: SetBuyBackAddress(address)
+          handler: handleSetBuyBackAddress
+        - event: SetDiceModulus(uint256)
+          handler: handleSetDiceModulus
+        - event: SetIsEarnable(bool)
+          handler: handleSetIsEarnable
+        - event: SetSettings(uint256,uint256,uint256)
+          handler: handleSetSettings
+        - event: SetUniRouterAddress(address)
+          handler: handleSetUniRouterAddress
+        - event: SetWethToAvaRouterAddress(address)
+          handler: handleSetWethToAvaRouterAddress
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Unpaused(address)
+          handler: handleUnpaused
+      file: ./src/a-vault-pcs.ts
