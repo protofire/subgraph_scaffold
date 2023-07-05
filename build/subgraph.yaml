@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: AVaultPCS
@@ -28,7 +28,7 @@ dataSources:
         - Unpaused
       abis:
         - name: AVaultPCS
-          file: ./abis/AVaultPCS.json
+          file: AVaultPCS/abis/AVaultPCS.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
@@ -54,4 +54,4 @@ dataSources:
           handler: handleTransfer
         - event: Unpaused(address)
           handler: handleUnpaused
-      file: ./src/a-vault-pcs.ts
+      file: AVaultPCS/AVaultPCS.wasm

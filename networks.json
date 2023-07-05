@@ -1,5 +1,5 @@
 {
-  "mainnet": {
+  "shiden": {
     "AVaultPCS": {
       "address": "0x9A6080753a35dCd8e77102aE83A93170A831393e",
       "startBlock": 1366564

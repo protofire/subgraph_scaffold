@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ datradito/shiden_temp",
+    "deploy": "graph deploy --node http://index-shiden.graph.astar.network/ datradito/shiden_temp",
     "create-local": "graph create --node http://localhost:8020/ datradito/shiden_temp",
     "remove-local": "graph remove --node http://localhost:8020/ datradito/shiden_temp",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 datradito/shiden_temp",
