@@ -1,5 +1,5 @@
 {
-  "mainnet": {
+  "shibuya": {
     "DIACoingeckoOracle": {
       "address": "0x1232AcD632Dd75f874E357c77295Da3f5Cd7733E",
       "startBlock": 81850
