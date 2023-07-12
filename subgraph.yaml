@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0x1232AcD632Dd75f874E357c77295Da3f5Cd7733E"
       abi: DIACoingeckoOracle
-      startBlock: 81850
+      startBlock: 80000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
